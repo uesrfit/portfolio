@@ -1,0 +1,149 @@
+body{
+    background-color: #edf2fc;;
+}
+*{
+   margin: 0;
+   padding: 0;
+}
+:root{
+   --primary-color: #edf2fc;
+   --secondary-color:#212121;
+}
+.dark-theme{
+   --primary-color: #000106;
+   --secondary-color:#fff;
+}
+#icon{
+   width: 35px;
+   cursor: pointer;
+   color: var(--secondary-color);
+   font-size: 10px;
+}
+nav ul{
+   flex: 1;
+   text-align: right;
+}
+.hero{
+   height: 100vh;
+   width: 100%;
+   background: var(--primary-color);
+   font-family: monospace;
+   position: relative;
+}
+nav{
+   width: 84%;
+   margin: auto;
+   padding: 30px 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.logo{
+   width: 400px;
+   cursor: pointer;
+   position: absolute;
+   top: -130px;
+   left: 50px;
+}
+nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 20px;
+   font-family: aharoni;
+}
+nav ul li a{
+   text-decoration: none;
+   color: var(--secondary-color);
+}
+nav ul li a:hover{
+   color: #ff4321;
+   transition: all 1s;
+}
+.info{
+   margin-left: 8%;
+   margin-top: 15%;
+}
+.info h1{
+   font-size: 40px;
+   color:var(--secondary-color);
+   margin-bottom: 20px;
+   font-family: monospace;
+}
+span{
+   color: #ff4321;
+}
+.img-box{
+   width: 45%;
+   height: 80%;
+   position: absolute;
+   bottom: 0px;
+   right: 10px;
+}
+.img-box img{
+   height: 100%;
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translateX(-50%);
+   transition: 1s;
+}
+.img-box:hover .main-img{
+   bottom: 40px;
+}
+.social-links{
+   margin-left: 5%;
+   margin-top: 250px;
+}
+.social-links a{
+   font-size: 30px;
+   color: var(--secondary-color);
+   margin-right: 20px;
+}
+.social-links a:hover{
+   color: #ff4321
+}
+.checkBtn{
+   font-size: 30px;
+   color: white;
+   float: left;
+   line-height: 80px;
+   margin-left: 10px;
+   cursor: pointer;
+   display: none;
+}
+#check {
+   display: none;
+}
+@media(max-width: 700px){
+   .checkBtn{
+      display: block;
+   }
+
+   ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e2c;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0.5s;
+   }
+   nav ul li{
+      display: block;
+   }
+   a:hover, a.active{
+      background: none;
+      color: crimson;
+   }
+   #check:checked ~ ul{
+      left: 0;
+   }
+   .info h1{
+      margin-left: -15px;
+      margin-top: 80px;
+   }
+   .img-box img{
+      height: 90%;
+   }
+}
